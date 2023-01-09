@@ -1,0 +1,123 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 16px;
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body {
+	background-color: #c6ecd6;
+}
+
+header {
+	width: 100vw;
+	height: 64px;
+	background-color: #3CB371;
+	position: fixed; /* when scrolling, it remains fixed to its position with respect to the window */
+	top: 0;
+	left: 0;
+	color: #FFF;
+	display: flex; /* a way to display items in a layout */
+	justify-content: center; /* horizontal centring */
+	align-items: center; /* vertical centring */
+	z-index: 1000;
+}
+
+header.yellow {
+	background-color: #FEDA32;
+}
+
+main {
+	width: 100vw;
+	position: absolute; /* the absolute position with respect to the whole page */
+	top: 64px;
+	left: 0;
+}
+
+footer {
+	width: 100vw;
+	height: 24px;
+	background-color: #FFF;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	font-size: 12px;
+	padding: 4px;
+}
+
+/* you can select multiple items using comma */
+#left-column, #center-column, #right-column { 
+	padding: 12px;
+}
+
+#left-column, #right-column {
+	width: 25vw;
+	position: fixed;
+	top: 64px;
+}
+
+#left-column {
+	height: calc(100vh - 64px - 24px);
+	left: 0;
+}
+
+#right-column {
+	right: 0;
+}
+
+#center-column {
+	position: absolute;
+	left: 25vw;
+	width: 50vw;
+	background-color: #ecf9f2;
+	padding-bottom: 24px;
+}
+
+.column-tabs {
+	background-color: #FFF;
+	padding: 16px;
+	border-radius: 8px;	
+	font-size: 12px;
+	margin-bottom: 4px;
+	cursor: pointer; /* change cursor aspect when mouse is hover */
+}
+
+.column-tabs:hover { /* change aspect when the mouse touches the element */
+	background-color: #ecf9f2;
+}
+
+.column-tabs.personal-tab:hover { /* you can select objects that have multiple classes (NO SPACE between classes) */
+	background-color: #3CB371;
+	color: #FFF;
+}
+
+.column-tabs p { /* selects elements with tag p inside the .column-tabs elements (ADD A SPACE between the selectors) */
+	display: inline-block;
+}
+
+.user-pic {
+	width: 16px;
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+
+.post {
+	background-color: #FFF;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 16px;
+	margin-bottom: 16px;
+}
+
+.post-img-container {
+	width: 75%; /* with respect to the width of its container */
+}
+
+.post-img {
+	width: 100%; /* with respect to the width of its container (.post-img-container) */
+}
